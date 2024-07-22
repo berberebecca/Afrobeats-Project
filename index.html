@@ -726,7 +726,7 @@ const width = 960;
     const tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
 
     // Load CSV data with specified delimiter
-    d3.dsv("YT_Top_Countries_Afrobeats.csv").then(function(data) {
+    d3.dsv(",", "YT_Top_Countries_Afrobeats.csv").then(function(data) {
       const countryData = {};
       data.forEach(d => {
         if (!countryData[d.Country]) {
